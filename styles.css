@@ -16,7 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Top Bar */
 .top-bar {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
@@ -85,7 +84,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -147,7 +145,6 @@ body {
     border-radius: 3px;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -207,7 +204,6 @@ body {
     box-shadow: 0 6px 20px rgba(246, 198, 0, 0.6);
 }
 
-/* Marquee Section */
 .marquee-section {
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     padding: 2rem 0;
@@ -252,7 +248,6 @@ body {
     100% { transform: translateX(-50%); }
 }
 
-/* Categories Section */
 .categories {
     padding: 3rem 2rem;
     background: #fff;
@@ -310,7 +305,6 @@ body {
     margin: 0;
 }
 
-/* Products Section */
 .products {
     margin: 2rem 0;
     padding: 2.5rem 0;
@@ -440,7 +434,6 @@ body {
     to { opacity: 1; }
 }
 
-/* About Section */
 .about {
     display: flex;
     flex-direction: row;
@@ -547,7 +540,6 @@ body {
     margin: 0;
 }
 
-/* Industries Section */
 .industries {
     padding: 3rem 2rem;
     background: #fff;
@@ -628,7 +620,6 @@ body {
     transform: scale(0.98);
 }
 
-/* Testimonials Section */
 .testimonials {
     background: #fbf4df;
     padding: 3rem 2rem;
@@ -676,7 +667,6 @@ body {
     font-weight: bold;
 }
 
-/* Contact Section */
 .contact {
     background: #fff;
     padding: 3rem 2rem;
@@ -825,7 +815,6 @@ footer {
     }
 }
 
-/* Why Work With Us */
 .why-work-with-us {
     padding: 4rem 2rem;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -903,7 +892,6 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Contact Social Links */
 .contact-social {
     margin-top: 2rem;
     padding-top: 1.5rem;
@@ -956,7 +944,6 @@ footer {
     background: linear-gradient(135deg, #000000 0%, #333333 100%);
 }
 
-/* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
     bottom: 100px;
@@ -989,7 +976,6 @@ footer {
     background: var(--primary-dark);
 }
 
-/* Scroll Animations */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -1064,7 +1050,6 @@ footer {
 .animate-right:nth-child(3) { animation-delay: 0.5s !important; }
 .animate-right:nth-child(4) { animation-delay: 0.7s !important; }
 
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 1200px) {
     .whatsapp-float:hover {
         width: 160px;
@@ -1134,18 +1119,6 @@ footer {
         display: flex;
     }
     
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(10px, 10px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-    
     .nav-menu {
         position: fixed;
         right: -100%;
@@ -1182,8 +1155,8 @@ footer {
     }
     
     .nav-menu.active {
-        right: 0;
-        z-index: 9999;
+        right: 0 !important;
+        z-index: 9999 !important;
     }
     
     .hero {
@@ -1250,31 +1223,31 @@ footer {
     }
     
     .image-grid {
-        height: 260px;
+        height: 240px;
         max-width: 100%;
-        position: relative;
         width: 100%;
+        position: relative;
     }
     
     .img-large {
-        width: 180px;
-        height: 150px;
+        width: 150px;
+        height: 120px;
         top: 0;
         left: 0;
         position: absolute;
     }
     
     .img-small-left {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         bottom: 0;
         left: 0;
         position: absolute;
     }
     
     .img-small-right {
-        width: 130px;
-        height: 130px;
+        width: 110px;
+        height: 110px;
         bottom: 0;
         right: 0;
         position: absolute;
@@ -1388,31 +1361,30 @@ footer {
     
     .about-images {
         width: 100%;
-        overflow: hidden;
     }
     
-      .image-grid {
-        height: 230px;
+    .image-grid {
+        height: 200px;
         max-width: 100%;
     }
     
     .img-large {
-        width: 150px;
-        height: 130px;
+        width: 130px;
+        height: 100px;
         top: 0;
         left: 0;
     }
     
     .img-small-left {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         bottom: 0;
         left: 0;
     }
     
     .img-small-right {
-        width: 110px;
-        height: 110px;
+        width: 90px;
+        height: 90px;
         bottom: 0;
         right: 0;
     }
@@ -1439,21 +1411,17 @@ footer {
         font-size: 24px;
     }
 }
-/* Hamburger Close Icon */
+
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-    background: #F6C600;
+    transform: rotate(45deg) translate(10px, 10px) !important;
+    background: #F6C600 !important;
 }
 
 .hamburger.active span:nth-child(2) {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-    background: #F6C600;
-}
-
-.hamburger span {
-    background: #fff;
+    transform: rotate(-45deg) translate(7px, -7px) !important;
+    background: #F6C600 !important;
 }

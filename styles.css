@@ -1,4 +1,3 @@
-/* Parent wrapper for full hero and header background */
 .hero-bg-wrap {
     position: relative;
     width: 100vw;
@@ -6,7 +5,6 @@
     overflow: hidden;
 }
 
-/* Carousel slideshow as full background */
 .hero-bg-carousel {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -19,7 +17,6 @@
     filter: brightness(0.60);
 }
 
-/* Overlay for opacity/blend */
 .hero-bg-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -27,19 +24,19 @@
     z-index: 2;
 }
 
-/* Content stacks above the overlay/slideshow */
-.header-container, .hero-content {
+/* Header, menu, social links: always clickable */
+.header-container,
+.main-menu-wrapper,
+.navbar,
+.social-icons {
     position: relative;
-    z-index: 3;
+    z-index: 10 !important;
+}
+.navbar-toggler {
+    z-index: 20 !important;
+    position: relative;
 }
 
-/* Header spacing & max-width for nice centering */
-.header-container {
-    margin-top: 0px;
-    max-width: 1140px;
-}
-
-/* Logo, menu, social icon styles */
 .logo img {
     height: 40px;
     width: auto;
@@ -65,7 +62,6 @@
     display: flex;
     gap: 50px;
     align-items: center;
-    
 }
 .main-menu .nav-link {
     color: #2d3142;
@@ -73,7 +69,6 @@
     padding: 8px 16px;
     border-radius: 16px;
     transition: background 0.2s;
-    
 }
 .main-menu .nav-link:hover,
 .main-menu .nav-link.active {
@@ -86,7 +81,7 @@
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28213, 90, 0, 0.7%29' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
 }
-/* Hero content */
+
 .hero-content {
     position: absolute;
     top: 150px; left: 0; right: 0; bottom: 0;
@@ -99,7 +94,7 @@
     width: 100%;
     padding-top: 0;
 }
-.hero-content h1{
+.hero-content h1 {
     font-size: 70px;
 }
 .hero-content h1,
@@ -107,78 +102,78 @@
     color: #ffffff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
-.hero-content .btn{
+.hero-content .btn {
     color: #ffffff;
-     background-color: #2ec4b6;
+    background-color: #2ec4b6;
     padding: 12px 20px;
     border-radius: 12px;
 }
-.hero-content .btn:hover{
+.hero-content .btn:hover {
     color: #ffffff;
-     background-color: #14213d;
-   
+    background-color: #14213d;
 }
-.hero-content a{
+
+.hero-content a {
     font-size: 16px;
 }
-
-.feature-img-1 {
-    background: url('images/cehmical2.jpg') center center/cover no-repeat;
+.features-section,
+.features-section .container-fluid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
-.feature-img-2 {
-    background: url('images/auto.jpg') center center/cover no-repeat;
-}
-.feature-img-3 {
-    background: url('images/chemical.jpg') center center/cover no-repeat;
-}
-
 .row.g-0 {
-    align-items: stretch; /* vertical stretch for all columns */
+    align-items: stretch;
 }
 .feature-block {
     position: relative;
     min-height: 300px;
-    height: 100%; /* Ensures the overlay always stretches */
-    overflow: hidden; /* Prevents spilling */
+    height: 100%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .block-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: 1;
     pointer-events: none;
 }
-
-/* Set independent overlay color+opacity for each block */
-.block-overlay-2 { background: rgba(5, 1, 114, 0.839); transition: background 0.3s; }
-.block-overlay-3 { background: rgba(2, 121, 165, 0.927); transition: background 0.3s; }
-.block-overlay-1 { background: rgba(0, 0, 47, 0.925);  transition: background 0.3s;}
-
-
-.feature-block:hover .block-overlay-3 { background: rgba(204, 173, 1, 0.903); }
-.feature-block:hover .block-overlay-2 { background: rgba(204, 173, 1, 0.903); }
-.feature-block:hover .block-overlay-1 { background: rgba(204, 173, 1, 0.903); }
-
+.block-overlay-1 { background: rgba(0, 0, 47, 0.80); transition: background 0.3s; }
+.block-overlay-2 { background: rgba(5, 1, 114, 0.70); transition: background 0.3s; }
+.block-overlay-3 { background: rgba(2, 121, 165, 0.70); transition: background 0.3s; }
+.feature-block:hover .block-overlay-1 { background: rgba(204, 173, 1, 0.80); }
+.feature-block:hover .block-overlay-2 { background: rgba(204, 173, 1, 0.80); }
+.feature-block:hover .block-overlay-3 { background: rgba(204, 173, 1, 0.80); }
 .feature-block > *:not(.block-overlay) {
     position: relative;
     z-index: 2;
 }
-
-.feature-block h5,p{
+.feature-block h5, .feature-block p {
     color: #ffffff;
 }
-
-.feature-block h5{
+.feature-block h5 {
     font-size: 25px;
 }
 
 
 /* Responsive adjustments */
 @media (max-width: 767.98px) {
+    .hero-bg-wrap {
+        min-height: 0 !important;
+        height: auto !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .hero-content {
+        position: relative !important;
+        top: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
     .header-container .row {
         flex-direction: column;
         text-align: center;
@@ -198,7 +193,6 @@
         margin-top: 0;
         background-color: #ffffff39;
     }
-   
     .main-menu {
         flex-direction: column;
         gap: 12px;
@@ -210,12 +204,10 @@
     .hero-bg-img {
         height: 70vh;
     }
-    .hero-content h1{
-    font-size: 40px;
-}
-.feature-block {
-
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    .feature-block {
         min-height: 180px;
     }
-   
 }

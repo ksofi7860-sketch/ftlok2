@@ -217,16 +217,5 @@
 
         min-height: 180px;
     }
-    .hero-bg-wrap {
-        min-height: 70vh !important; /* or desired height */
-    }
-    .hero-content {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0; right: 0; bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+   
 }

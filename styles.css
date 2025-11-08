@@ -626,7 +626,8 @@ html, body {
   }
   .hero-content h1 {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 700;
+    padding: 2px;
   }
   
   /* Mobile Menu Overlay */

@@ -6,7 +6,10 @@
     <title>Professional Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link href="styles.css" rel="stylesheet" />
+    <script src="scripts.js"></script> 
 </head>
 <body>
     <section class="hero-bg-wrap position-relative">
@@ -30,50 +33,106 @@
         <!-- Overlay for opacity -->
         <div class="hero-bg-overlay"></div>
 
-        <!-- All top content sits above the slideshow/overlay -->
-        <header class="header-container container position-relative z-index-3">
-            <div class="row align-items-center py-2 gx-0">
-                <!-- Logo Left -->
-                <div class="col-6 d-flex justify-content-start align-items-center">
-                    <a href="#" class="logo">
-                        <img src="logo.png" alt="Logo" />
-                    </a>
-                </div>
-                <!-- Social Icons Right -->
-                <div class="col-6 d-flex justify-content-end align-items-center">
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <nav class="main-menu-wrapper my-3">
-                <nav class="navbar navbar-expand-md justify-content-center">
-                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-                        aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
-                        <ul class="main-menu navbar-nav mb-0">
-                            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </nav>
-        </header>
+<header class="header-container container position-relative z-index-3">
+  <nav class="navbar navbar-expand-md navbar-light py-2">
+    <div class="container-fluid custom-header-bar">
+
+      <!-- CONTACT & SOCIAL - MOBILE ONLY -->
+      <div class="header-contact-social-mobile d-flex d-md-none w-100 mb-2 justify-content-center align-items-center gap-3">
+        <div class="header-contact mb-0 text-end px-1">
+          <a href="mailto:youremail@example.com" class="contact-email d-inline-block me-2">
+            <i class="bi bi-envelope-fill me-1"></i>
+            youremail@example.com
+          </a>
+          <a href="tel:+1234567890" class="contact-phone d-inline-block ms-0">
+            <i class="bi bi-telephone-fill me-1"></i>
+            +1 234 567 890
+          </a>
+        </div>
+        <div class="social-icons d-flex align-items-center gap-2 ms-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- LOGO -->
+      <a href="#" class="navbar-brand d-flex align-items-center mx-auto mx-md-0">
+        <img src="images/ft-lok-logo.jpg" alt="Logo" style="height:100px; width: 100px; border-radius: 50px;" />
+      </a>
+
+      <!-- TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSIBLE MENU -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <div class="main-menu-wrapper">
+          <ul class="navbar-nav main-menu mb-2 mb-md-0 gap-md-4 gap-2">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+            <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Products
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+    <li><a class="dropdown-item" href="#">Product 1</a></li>
+    <li><a class="dropdown-item" href="#">Product 2</a></li>
+    <li><a class="dropdown-item" href="#">Product 3</a></li>
+    <li><a class="dropdown-item" href="#">Product 4</a></li>
+    <li><a class="dropdown-item" href="#">Product 5</a></li>
+    <li><a class="dropdown-item" href="#">Product 6</a></li>
+  </ul>
+</li>
+
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACT & SOCIAL - DESKTOP ONLY -->
+      <div class="header-contact-social d-none d-md-flex flex-column align-items-end ms-3">
+        <div class="header-contact mb-2 text-end">
+          <a href="mailto:youremail@example.com" class="contact-email d-block">
+            <i class="bi bi-envelope-fill me-1"></i>
+            youremail@example.com
+          </a>
+          <a href="tel:+1234567890" class="contact-phone d-block mt-1">
+            <i class="bi bi-telephone-fill me-1"></i>
+            +1 234 567 890
+          </a>
+        </div>
+        <div class="social-icons d-flex">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
 
         <!-- Hero content always above overlay and background -->
-        <div class="hero-content position-relative z-index-3">
-            <h1>Welcome to Your Professional Website</h1>
-            <p class="lead mb-4">Showcase your expertise, projects, and services with confidence!</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-        </div>
+        <div class="hero-content position-relative z-index-3 ">
+    <h1>Welcome to FT-LOK Valves & Fittings</h1>
+    <p class="lead mb-4 lead fade-in-up">Your Trusted Partner for Industrial Excellence</p>
+    <div class="hero-buttons">
+        <a href="#contact" class="btn">
+            <i class="fas fa-envelope"></i>Get In Touch
+        </a>
+        <a href="pdfs/catalogue.pdf" target="_blank" class="btn1">
+            <i class="fa-solid fa-download"></i>Download Catalogue
+        </a>
+    </div>
+</div>
+
     </section>
 <!-- Features/qualities section: no gap below hero -->
 <section class="features-section w-100">
@@ -105,6 +164,840 @@
 </section>
 
 
+
+<section class="products-section py-5" id="products">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Premium quality valves and fittings for every industrial need</p>
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="row g-4 justify-content-center">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 1" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Ball Valves</h5>
+                        <p class="product-category">Industrial Valves</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 2" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Gate Valves</h5>
+                        <p class="product-category">Control Valves</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 3" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Check Valves</h5>
+                        <p class="product-category">Safety Equipment</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 4" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Butterfly Valves</h5>
+                        <p class="product-category">Flow Control</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 5" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Globe Valves</h5>
+                        <p class="product-category">Precision Control</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/valve.jpg" alt="Product 6" class="product-img" />
+                        <div class="product-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5 class="product-title">Needle Valves</h5>
+                        <p class="product-category">Fine Control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="text-center mt-5">
+            <a href="products.html" class="btn-view-all">
+                View All Products <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="about py-5" id="about">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <!-- Images Column -->
+            <div class="col-lg-6 col-md-12">
+                <div class="about-images">
+                    <div class="row g-3">
+                        <!-- Large Image - Full Width -->
+                        <div class="col-12">
+                            <img src="https://cdn.pixabay.com/photo/2016/06/06/17/53/valve-1440042_1280.jpg" 
+                                 alt="About Us 1" 
+                                 class="img-fluid rounded shadow img-large">
+                        </div>
+                        <!-- Two Small Images Side by Side -->
+                        <div class="col-6">
+                            <img src="https://cdn.pixabay.com/photo/2020/11/22/16/46/christmas-balls-5767161_1280.jpg" 
+                                 alt="About Us 2" 
+                                 class="img-fluid rounded shadow img-small-left">
+                        </div>
+                        <div class="col-6">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/13/15/22/valve-986317_1280.jpg" 
+                                 alt="About Us 3" 
+                                 class="img-fluid rounded shadow img-small-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text Column -->
+            <div class="col-lg-6 col-md-12">
+                <div class="about-text">
+                  
+                    <h2 class="mb-4 fw-bold">About Us</h2>
+                    <p class="lead mb-4">
+                        FTLok Valves Fittings is based in Mumbai, Maharashtra, providing an extensive range of valves and valve fittings adopted for a large variety of service applications in different sectors. We are known for high service quality and a wide product range, supported by decades of experience in the industry.
+                    </p>
+                    
+                    <!-- Stats Row -->
+                    <div class="row text-center g-3 about-stats">
+    <div class="col-4">
+        <div class="stat-item p-3">
+            <h3 class="display-5 fw-bold counter" data-target="25" data-suffix="+">0</h3>
+            <p class="text-muted mb-0">Years Experience</p>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="stat-item p-3">
+            <h3 class="display-5 fw-bold counter" data-target="5000" data-suffix="+">0</h3>
+            <p class="text-muted mb-0">Happy Clients</p>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="stat-item p-3">
+            <h3 class="display-5 fw-bold counter" data-target="100" data-suffix="%">0</h3>
+            <p class="text-muted mb-0">Quality Assured</p>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="gallery-slider py-5" id="gallery">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Section Title -->
+            <div class="col-12 text-center mb-5">
+              
+                <h2 class="fw-bold display-5" style="color: #14213d;">Our Gallery</h2>
+                <p class="text-muted">Explore our products and projects</p>
+            </div>
+            
+            <!-- Smaller Carousel on Left -->
+            <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                <div id="carouselSmall" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="https://cdn.pixabay.com/photo/2016/06/06/17/53/valve-1440042_1280.jpg" 
+                                 class="d-block w-100 carousel-img-small" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/13/15/22/valve-986317_1280.jpg" 
+                                 class="d-block w-100 carousel-img-small" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2020/11/22/16/46/christmas-balls-5767161_1280.jpg" 
+                                 class="d-block w-100 carousel-img-small" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg" 
+                                 class="d-block w-100 carousel-img-small" alt="Image 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Larger Carousel on Right -->
+            <div class="col-lg-7 col-md-12">
+                <div id="carouselLarge" class="carousel slide shadow-lg rounded" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="https://cdn.pixabay.com/photo/2016/06/06/17/53/valve-1440042_1280.jpg" 
+                                 class="d-block w-100 carousel-img-large" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2015/10/13/15/22/valve-986317_1280.jpg" 
+                                 class="d-block w-100 carousel-img-large" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2020/11/22/16/46/christmas-balls-5767161_1280.jpg" 
+                                 class="d-block w-100 carousel-img-large" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg" 
+                                 class="d-block w-100 carousel-img-large" alt="Image 4">
+                        </div>
+                    </div>
+                    
+                  
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselLarge" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselLarge" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselLarge" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselLarge" data-bs-slide-to="3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="why-us py-5" id="why-us">
+    <div class="container">
+        <div class="row">
+            <!-- Left Side - 70% (Feature Cards) -->
+            <div class="col-lg-8 col-md-12">
+                <!-- Section Title -->
+                <div class="mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-3">Why Work With Us?</h2>
+                    <p class="text-white-50 fs-5">An ISO 9001:2000 Company committed to excellence</p>
+                </div>
+                
+                <!-- Feature Cards Grid -->
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>ISO 9001:2000 Certified</h5>
+                                <p>Internationally recognized quality standards</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Quality Policy</h5>
+                                <p>Uncompromising commitment to excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Third Party Inspection</h5>
+                                <p>Independent quality verification</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Sourcing Capabilities</h5>
+                                <p>Global network for best products</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Warehousing & Packaging</h5>
+                                <p>Secure storage and professional packaging</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Expert Manpower</h5>
+                                <p>Skilled professionals at your service</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 7 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Wide Logistic Support</h5>
+                                <p>Efficient delivery across regions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 8 -->
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Customer Commitment</h5>
+                                <p>Your satisfaction is our priority</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - 30% (CTA or Image) -->
+            <div class="col-lg-4 col-md-12 mt-5 mt-lg-0">
+                <div class="cta-box">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-star fa-3x text-warning mb-3"></i>
+                        <h3 class="text-white fw-bold mb-3">Ready to Work Together?</h3>
+                        <p class="text-white-50 mb-4">Join hundreds of satisfied clients who trust us for quality and reliability.</p>
+                        <a href="#contact" class="btn btn-light btn-lg px-5 py-3">
+                            <i class="fas fa-phone me-2"></i>Contact Us
+                        </a>
+                    </div>
+                    
+                    <div class="trust-badges mt-4">
+                        <div class="badge-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span class="text-white">25+ Years Experience</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span class="text-white">5000+ Happy Clients</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span class="text-white">100% Quality Assured</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="facilities-section py-5" id="facilities">
+    <div class="container">
+        <!-- Top Row: Left intro (30%) + Right 2 cards (70%) -->
+        <div class="row g-4 mb-4">
+            <!-- Left: Section Intro -->
+            <div class="col-lg-4 col-md-12">
+                <div class="section-intro h-100">
+                   
+                    <h2 class="display-5 fw-bold mb-4" style="color: #14213d;">Facilities & Services</h2>
+                    <p class="lead text-muted mb-4">
+                        State-of-the-art equipment and certified expertise to deliver exceptional service quality.
+                    </p>
+                    
+                </div>
+            </div>
+            
+            <!-- Right: First 2 Cards -->
+            <div class="col-lg-8 col-md-12">
+                <div class="row g-4">
+                    <!-- Service Card 1 -->
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="service-number">01</div>
+                            <div class="service-icon-wrapper">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h5 class="service-title">Factory Training & Support</h5>
+                            <p class="service-description">Advanced Certified Technicians with comprehensive factory training and ongoing support</p>
+                           
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="col-md-6">
+                        <div class="service-card h-100">
+                            <div class="service-number">02</div>
+                            <div class="service-icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="service-title">Analysis Equipment</h5>
+                            <p class="service-description">Data Logger for Flow & Pressure Testing, Particle Counting and advanced diagnostics</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Row: Remaining Cards (3 Columns Full Width) -->
+        <div class="row g-4">
+            <!-- Service Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h5 class="service-title">Hydraulic Cylinder Bench</h5>
+                    <p class="service-description">7.5m Hydraulic Cylinder Bench for comprehensive testing and maintenance</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">04</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-temperature-low"></i>
+                    </div>
+                    <h5 class="service-title">Clean Room Environment</h5>
+                    <p class="service-description">Climatically controlled clean environment for precise dismantling & assembly</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">05</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h5 class="service-title">Hydro Test Enclosure</h5>
+                    <p class="service-description">Purpose Built Hydro Test Enclosure (up to 42,000 psi) for extreme pressure testing</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">06</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h5 class="service-title">Access Equipment</h5>
+                    <p class="service-description">Elevated Work Platform with CBIP Certified Technicians for Servicing & Certification</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 7 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">07</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h5 class="service-title">Light Engineering Services</h5>
+                    <p class="service-description">Precision machining services for custom components and repairs</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 8 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">08</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h5 class="service-title">Heavy Plant Workshops</h5>
+                    <p class="service-description">Specialist Machinery Workshops for industrial equipment maintenance</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 9 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">09</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h5 class="service-title">Test Rigs</h5>
+                    <p class="service-description">Comprehensive testing facilities for quality assurance and performance validation</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 10 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">10</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-shower"></i>
+                    </div>
+                    <h5 class="service-title">Water Blasters</h5>
+                    <p class="service-description">Servicing, Hire, Sales - Complete water blasting solutions</p>
+                    
+                </div>
+            </div>
+            
+            <!-- Service Card 11 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100">
+                    <div class="service-number">11</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-compress"></i>
+                    </div>
+                    <h5 class="service-title">Industrial Compressors</h5>
+                    <p class="service-description">High-performance industrial compressor services and maintenance</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="industries-section py-5" id="industries">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Left Side: Title (20-30%) -->
+            <div class="col-lg-3 col-md-12 text-center mb-4 mb-lg-0">
+                <div class="industries-title-wrap">
+                    
+                    <h2 class="section-title mb-3">Industries We Serve</h2>
+                    <p class="section-subtitle">Trusted across multiple sectors</p>
+                </div>
+            </div>
+            
+            <!-- Right Side: Scrolling Industries (70-80%) -->
+            <div class="col-lg-9 col-md-12">
+                <div class="industries-marquee">
+                    <div class="marquee-content">
+                        <!-- Industry Item 1 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/auto.jpg" alt="Oil & Gas">
+                            </div>
+                            <p class="industry-name">Oil & Gas</p>
+                        </div>
+                        
+                        <!-- Industry Item 2 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/ft-lok-logo.jpg" alt="Chemical Industry">
+                            </div>
+                            <p class="industry-name">Chemical Industry</p>
+                        </div>
+                        
+                        <!-- Industry Item 3 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/chemical.jpg" alt="Manufacturing">
+                            </div>
+                            <p class="industry-name">Manufacturing</p>
+                        </div>
+                        
+                        <!-- Industry Item 4 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/cehmical2.jpg" alt="Water Treatment">
+                            </div>
+                            <p class="industry-name">Water Treatment</p>
+                        </div>
+                        
+                        <!-- Industry Item 5 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/chemical3.jpg" alt="Power Generation">
+                            </div>
+                            <p class="industry-name">Power Generation</p>
+                        </div>
+                        
+                        <!-- Industry Item 6 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/valve.jpg" alt="HVAC Systems">
+                            </div>
+                            <p class="industry-name">HVAC Systems</p>
+                        </div>
+                        
+                        <!-- Industry Item 7 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/auto.jpg" alt="Construction">
+                            </div>
+                            <p class="industry-name">Construction</p>
+                        </div>
+                        
+                        <!-- Industry Item 8 -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/chemical.jpg" alt="Marine Industry">
+                            </div>
+                            <p class="industry-name">Marine Industry</p>
+                        </div>
+                        
+                        <!-- Duplicate items for seamless loop -->
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/oil-gas.jpg" alt="Oil & Gas">
+                            </div>
+                            <p class="industry-name">Oil & Gas</p>
+                        </div>
+                        
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/chemical.jpg" alt="Chemical Industry">
+                            </div>
+                            <p class="industry-name">Chemical Industry</p>
+                        </div>
+                        
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/manufacturing.jpg" alt="Manufacturing">
+                            </div>
+                            <p class="industry-name">Manufacturing</p>
+                        </div>
+                        
+                        <div class="industry-item">
+                            <div class="industry-circle">
+                                <img src="images/water.jpg" alt="Water Treatment">
+                            </div>
+                            <p class="industry-name">Water Treatment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+    <!-- Top Section - 4 Columns -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Column 1: Logo & Description -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-section">
+                    <img src="images/ft-lok-logo.jpg" alt="FTLok Logo" class="footer-logo mb-3">
+                    <p class="footer-description">
+                        FTLok Fine Tech Engineering Corporation - Your trusted partner for quality valves and fittings solutions.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="footer-social mt-4">
+                        <h6 class="text-white mb-3">Follow Us</h6>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Column 3: Additional Links -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">Additional Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Careers</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Column 4: Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-section">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Palm Court Bldg M 501, 5th Floor, New Link Road, Malad West, Mumbai 400064</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@ftlokvalves.com">support@ftlokvalves.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+918888888888">+91-8888888888</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Mon-Sun: 10:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Full Width Map Section -->
+    <div class="footer-map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3267339!2d72.8377!3d19.1746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEwJzI4LjYiTiA3MsKwNTAnMTUuNyJF!5e0!3m2!1sen!2sin!4v1234567890"
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+    
+    <!-- Copyright Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 FTLok Valves Fittings. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating Buttons -->
+<a href="#" id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<a href="https://wa.me/918888888888" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+
+<!-- Preloader -->
+
+<div id="preloader">
+    <div class="preloader-content">
+        <div class="spinner"></div>
+        <div class="loader-logo">
+            <img src="images/ft-lok.png" alt="Logo" class="pulse">
+        </div>
+        <p class="loading-text">Loading<span class="dots"></span></p>
+    </div>
+</div>
+
+
 </html>

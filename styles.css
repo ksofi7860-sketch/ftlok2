@@ -612,13 +612,13 @@ html, body {
 @media (max-width: 767.98px) {
   /* FIX: Mobile hero - match image height to container */
   .hero-bg-wrap {
-    min-height: 70vh !important;
+    min-height: 90vh !important;
   }
   .hero-bg-img {
-    height: 70vh;
+    height: 90vh;
   }
   .hero-bg-overlay {
-    height: 70vh;
+    height: 90vh;
   }
   .hero-content {
     top: 80px !important;

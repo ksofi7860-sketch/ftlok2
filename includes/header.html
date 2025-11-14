@@ -1,0 +1,75 @@
+<!-- includes/header.html -->
+<header class="header-container container position-relative z-index-3">
+  <nav class="navbar navbar-expand-md navbar-light py-2">
+    <div class="container-fluid custom-header-bar">
+      <!-- CONTACT & SOCIAL - MOBILE ONLY -->
+      <div class="header-contact-social-mobile d-flex d-md-none w-100 mb-2 justify-content-center align-items-center gap-3">
+        <div class="header-contact mb-0 text-end px-1">
+          <a href="mailto:youremail@example.com" class="contact-email d-inline-block me-2">
+            <i class="bi bi-envelope-fill me-1"></i>youremail@example.com
+          </a>
+          <a href="tel:+1234567890" class="contact-phone d-inline-block ms-0">
+            <i class="bi bi-telephone-fill me-1"></i>+1 234 567 890
+          </a>
+        </div>
+        <div class="social-icons d-flex align-items-center gap-2 ms-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- LOGO -->
+      <a href="index.html" class="navbar-brand d-flex align-items-center mx-auto mx-md-0">
+        <img src="images/ft-lok-logo.jpg" alt="Logo" style="height:100px; width: 100px; border-radius: 50px;" />
+      </a>
+
+      <!-- TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSIBLE MENU -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <div class="main-menu-wrapper">
+          <ul class="navbar-nav main-menu mb-2 mb-md-0 gap-md-4 gap-2">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Portfolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                <li><a class="dropdown-item" href="#">Web Applications</a></li>
+                <li><a class="dropdown-item" href="#">Network Security Projects</a></li>
+                <li><a class="dropdown-item" href="#">Cloud Security Audits</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACT & SOCIAL - DESKTOP ONLY -->
+      <div class="header-contact-social d-none d-md-flex flex-column align-items-end ms-3">
+        <div class="header-contact mb-2 text-end">
+          <a href="mailto:youremail@example.com" class="contact-email d-block">
+            <i class="bi bi-envelope-fill me-1"></i>youremail@example.com
+          </a>
+          <a href="tel:+1234567890" class="contact-phone d-block mt-1">
+            <i class="bi bi-telephone-fill me-1"></i>+1 234 567 890
+          </a>
+        </div>
+        <div class="social-icons d-flex">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

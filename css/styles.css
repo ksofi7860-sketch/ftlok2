@@ -1657,3 +1657,106 @@ html, body {
         font-size: 0.85rem;
     }
 }
+
+
+/* ========================================
+   PAGE HERO SECTION (For About, Services, etc.)
+   Similar to homepage hero but with solid color
+   ======================================== */
+
+.page-hero-wrap {
+    position: relative;
+    width: 100vw;
+    min-height: 60vh; /* Shorter than homepage hero */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Solid Color Background (instead of carousel) */
+.page-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #14213d 0%, #0f1729 100%);
+    z-index: 1;
+}
+
+/* Overlay (same as homepage) */
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(4, 200, 196, 0.15) 0%, rgba(20, 33, 61, 0.40) 100%);
+    z-index: 2;
+}
+
+/* Page Hero Content (title and breadcrumb) */
+.page-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 40px; /* Add space below header */
+}
+
+.page-hero-content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    font-weight: 800;
+    padding-top: 100px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Breadcrumb Styling */
+.page-hero-content .breadcrumb {
+    background: transparent;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.page-hero-content .breadcrumb-item a {
+    color: #2ec4b6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.page-hero-content .breadcrumb-item a:hover {
+    color: #fff;
+}
+
+.page-hero-content .breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.page-hero-content .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .page-hero-wrap {
+        min-height: 50vh;
+    }
+    
+    .page-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-hero-content .breadcrumb {
+        font-size: 0.95rem;
+    }
+}

@@ -2821,7 +2821,11 @@ textarea.form-control {
         flex-direction: column;
         text-align: center;
     }
-    
+    .contact-card-content {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
     .contact-card-icon {
         margin: 0 auto;
     }

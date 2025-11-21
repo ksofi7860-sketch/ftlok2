@@ -3461,3 +3461,9 @@ textarea.form-control {
         padding: 10px 20px;
     }
 }
+
+
+.header-contact .phone{
+    color: white;
+    text-decoration: none;
+}

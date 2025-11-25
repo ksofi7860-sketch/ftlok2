@@ -1594,28 +1594,37 @@ html, body {
     transition: all 0.3s;
 }
 
-/* Responsive adjustments */
+/* --- BIGGER ON MOBILE! --- */
 @media (max-width: 991px) {
     .industry-item {
         width: 150px;
         min-width: 150px;
-        height: 80px;
+        height: 200px;
     }
     .industry-name {
-        font-size: .9rem;
-        padding: 6px 10px;
-        margin: 8px 8px 0 0;
+        font-size: 1rem;
+        padding: 7px 14px;
+        margin: 10px 10px 0 0;
     }
 }
 @media (max-width: 575px) {
     .industry-item {
-        width: 120px;
-        min-width: 120px;
-        height: 64px;
+        width: 70vw;     /* Almost full device width */
+        min-width: 70vw;
+        height: 40vw;    /* Nice aspect ratio */
+        max-width: 350px;
+        max-height: 170px;
+    }
+    .marquee-content {
+        gap: 0;
+    }
+    .industry-image-wrapper img {
+        border-radius: 1px;
     }
     .industry-name {
-        font-size: .8rem;
-        padding: 5px 8px;
+        font-size: 1rem;
+        padding: 6px 13px;
+        margin: 7px 7px 0 0;
     }
 }
 

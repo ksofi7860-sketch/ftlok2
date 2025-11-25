@@ -1611,9 +1611,9 @@ html, body {
     .industry-item {
         width: 70vw;     /* Almost full device width */
         min-width: 70vw;
-        height: 40vw;    /* Nice aspect ratio */
+        height: 50vw;    /* Nice aspect ratio */
         max-width: 350px;
-        max-height: 170px;
+        max-height: 190px;
     }
     .marquee-content {
         gap: 0;

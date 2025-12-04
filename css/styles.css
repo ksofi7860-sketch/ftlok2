@@ -3320,6 +3320,7 @@ textarea.form-control {
 .product-info {
     padding: 20px;
     text-align: center;
+    background-color: #f4fffe;
 }
 
 .product-info h5 {

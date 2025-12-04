@@ -265,7 +265,9 @@ html, body {
 .product-img-wrap {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
     overflow: hidden;
     background: linear-gradient(135deg, #f0f3f9, #e9ecef);
 }
@@ -392,7 +394,11 @@ html, body {
         font-size: 1.8rem;
     }
     .product-img-wrap {
-        height: 180px;
+        height: 280px;      /* mobile height */
+    }
+
+    .product-img-wrap img {
+        object-fit: fill;  /* crop edges, but looks good on tall cards */
     }
 }
 
@@ -3227,7 +3233,7 @@ textarea.form-control {
 /* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
@@ -3238,6 +3244,7 @@ textarea.form-control {
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    
 }
 
 .product-card:hover {
@@ -3249,7 +3256,7 @@ textarea.form-control {
 .product-image {
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
 }
 

@@ -1667,13 +1667,45 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/aboutus.avif'); /* ADD YOUR IMAGE */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
 }
+.hero-about .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
 
+.hero-contact .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+.hero-services .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+.hero-products1 .page-hero-bg{
+    background-image: url('../images/ballvalve.png');
+    background-size: cover   ;
+}
+.hero-products2 .page-hero-bg {
+    background-image: url('../images/ballvalve.png');
+}
+.hero-products3 .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+.hero-products4 .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+.hero-products5 .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+.hero-products6 .page-hero-bg {
+    background-image: url('../images/aboutus.avif');
+}
+
+.hero-faq .page-hero-bg {
+    background-image: url('../images/7879.jpg');
+    background-size: cover;
+}
 /* Dark Gradient Overlay (keeps text readable) */
 .page-hero-overlay {
     position: absolute;
@@ -3451,4 +3483,180 @@ textarea.form-control {
 .header-contact .phone{
     color: white;
     text-decoration: none;
+}
+
+
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+
+.faq-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    position: relative;
+}
+
+.faq-section .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #14213d;
+}
+
+.faq-section .section-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Modern Accordion Styling */
+.faq-accordion {
+    border: none;
+}
+
+.faq-accordion .accordion-item {
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-item:hover {
+    box-shadow: 0 12px 40px rgba(46, 196, 182, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Accordion Button (Question) */
+.faq-accordion .accordion-button {
+    background: #fff;
+    color: #14213d;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 25px 30px;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #2ec4b6 0%, #0bbbad 100%);
+    color: #fff;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button i {
+    font-size: 1.5rem;
+    color: #2ec4b6;
+    transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) i {
+    color: #fff;
+    transform: rotate(180deg);
+}
+
+/* Remove default arrow, use custom icon */
+.faq-accordion .accordion-button::after {
+    background-image: none;
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #2ec4b6;
+    transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    color: #fff;
+    transform: rotate(180deg);
+}
+
+/* Focus state */
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+/* Accordion Body (Answer) */
+.faq-accordion .accordion-body {
+    padding: 25px 30px 30px 70px;
+    color: #6c757d;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    background: #fff;
+}
+
+/* FAQ CTA Box */
+.faq-cta {
+    background: linear-gradient(135deg, #14213d 0%, #0f1729 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(20, 33, 61, 0.2);
+}
+
+.faq-cta h4 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.faq-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.btn-faq-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #2ec4b6, #0bbbad);
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.3);
+}
+
+.btn-faq-contact:hover {
+    background: #fff;
+    color: #14213d;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .faq-section .section-heading {
+        font-size: 2rem;
+    }
+    
+    .faq-accordion .accordion-button {
+        font-size: 1rem;
+        padding: 20px 20px;
+    }
+    
+    .faq-accordion .accordion-button i {
+        font-size: 1.2rem;
+        margin-right: 10px !important;
+    }
+    
+    .faq-accordion .accordion-body {
+        padding: 20px 20px 25px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .faq-cta {
+        padding: 35px 25px;
+    }
+    
+    .faq-cta h4 {
+        font-size: 1.6rem;
+    }
 }

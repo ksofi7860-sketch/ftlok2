@@ -795,7 +795,7 @@ html, body {
 
 /* Large Carousel (Right) */
 .carousel-img-large {
-    height: 400px;
+    height: 450px;
     object-fit: cover;
     border-radius: 12px;
 }

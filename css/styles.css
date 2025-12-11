@@ -470,15 +470,15 @@ html, body {
 /* Main Menu */
 .main-menu-wrapper {
   background: #fff;
-  border-radius: 20px;
-  padding: 12px 60px;
+  border-radius: 25px;
+  padding: 12px 55px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.07);
   display: inline-block;
   margin-top: 30px;
   margin-left: 50px;
   flex-grow: 1;
   display: flex;
-  max-width: 600px;
+  max-width: 750px;
   justify-content: center;
 }
 .main-menu {
@@ -780,52 +780,55 @@ html, body {
 }
 
 
-
 /* Gallery Slider Section */
 .gallery-slider {
     background: #f8f9fa;
 }
 
+/* Add gap between containers */
+.gallery-slider .col-lg-5 {
+    padding-right: 30px; /* Gap on desktop */
+}
+
+/* Reduce overall width - center the carousels */
+.gallery-slider .row {
+    max-width: 1100px; /* Reduce from full container width */
+    margin: 0 auto;
+}
+
 /* Small Carousel (Left) */
+#carouselSmall {
+    max-width: 400px; /* Limit width */
+    margin: 0 auto;
+}
+
 .carousel-img-small {
-    height: 300px;
-    object-fit: cover;
+    height: 320px;
+    object-fit: contain;
+    background: #fff;
     border-radius: 12px;
+    padding: 20px;
 }
 
 /* Large Carousel (Right) */
+#carouselLarge {
+    max-width: 600px; /* Limit width */
+    margin: 0 auto;
+}
+
 .carousel-img-large {
     height: 450px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
     border-radius: 12px;
+    padding: 25px;
 }
 
-/* Carousel Controls Styling 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background: rgba(20, 33, 61, 0.8);
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-}
-
-.carousel-control-prev {
-    left: 15px;
-}
-
-.carousel-control-next {
-    right: 15px;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background: rgba(20, 33, 61, 1);
-}
-*/
 /* Indicators */
+.carousel-indicators {
+    margin-bottom: -15px;
+}
+
 .carousel-indicators button {
     width: 12px;
     height: 12px;
@@ -840,14 +843,36 @@ html, body {
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
-    .carousel-img-small {
-        height: 250px;
+    .gallery-slider .col-lg-5 {
+        padding-right: 15px;
+        margin-bottom: 30px; /* Gap between stacked carousels on mobile */
     }
+    
+    .carousel-img-small {
+        height: 280px;
+    }
+    
     .carousel-img-large {
-        height: 300px;
+        height: 350px;
+    }
+    
+    #carouselSmall,
+    #carouselLarge {
+        max-width: 100%;
     }
 }
 
+@media (max-width: 767px) {
+    .carousel-img-small {
+        height: 250px;
+        padding: 15px;
+    }
+    
+    .carousel-img-large {
+        height: 300px;
+        padding: 15px;
+    }
+}
 
 /* Why Us Section */
 .why-us {
@@ -966,6 +991,7 @@ html, body {
 
 
 
+
 /* Preloader */
 #preloader {
     position: fixed;
@@ -1030,6 +1056,7 @@ html, body {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.1); opacity: 0.8; }
 }
+
 
 /* Loading Text */
 /* Preloader */
@@ -4127,5 +4154,237 @@ textarea.form-control {
 
     .quality-iso-card img {
         width: 160px;
+    }
+}
+
+
+/* ========================================
+   DISTRIBUTORS PAGE CONTENT
+   ======================================== */
+
+/* Hero background for distributors page */
+.hero-distributors .page-hero-bg {
+    background-image: url('../images/ftlok-distributor.avif');
+    background-size: cover;
+}
+
+/* Intro Section */
+.distributor-intro {
+    background: #fff;
+}
+
+.distributor-intro .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #14213d;
+    line-height: 1.4;
+}
+
+.distributor-intro .lead-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.8;
+}
+
+/* Why Partner Section */
+.why-partner-section .section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #14213d;
+}
+
+.why-partner-section .section-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Benefit Cards */
+.benefit-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 20px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(46, 196, 182, 0.15);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2ec4b6, #0bbbad);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-icon i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.benefit-content h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #14213d;
+    margin-bottom: 12px;
+}
+
+.benefit-content p {
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Looking For Section */
+.looking-for-section {
+    background: #fff;
+}
+
+.looking-for-section .section-heading {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #14213d;
+}
+
+.criteria-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.criteria-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.criteria-list i {
+    font-size: 1.5rem;
+    color: #2ec4b6;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.criteria-list span {
+    color: #14213d;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.looking-for-image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Application Form Section */
+.application-form-section {
+    background: #f8f9fa;
+}
+
+.form-wrapper {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #14213d;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.distributor-form .form-label {
+    font-weight: 600;
+    color: #14213d;
+    margin-bottom: 8px;
+}
+
+.distributor-form .form-control,
+.distributor-form .form-select {
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.distributor-form .form-control:focus,
+.distributor-form .form-select:focus {
+    border-color: #2ec4b6;
+    box-shadow: 0 0 0 0.2rem rgba(46, 196, 182, 0.15);
+}
+
+.btn-submit-form {
+    width: 100%;
+    background: linear-gradient(135deg, #2ec4b6, #0bbbad);
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.3);
+}
+
+.btn-submit-form:hover {
+    background: linear-gradient(135deg, #14213d, #0f1729);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(20, 33, 61, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .distributor-intro .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefit-icon {
+        margin: 0 auto;
+    }
+    
+    .looking-for-image {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-partner-section .section-heading {
+        font-size: 2rem;
+    }
+    
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+    
+    .form-header h2 {
+        font-size: 1.7rem;
     }
 }

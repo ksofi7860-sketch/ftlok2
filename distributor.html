@@ -202,12 +202,25 @@
                         </div>
 
                         <form id="distributorForm" class="distributor-form">
-                            <div class="row g-3">
-                                <!-- Full Name -->
-                                <div class="col-md-6">
-                                    <label for="fullName" class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" required>
-                                </div>
+    <!-- CSRF Token (REQUIRED) -->
+    <?php
+    session_start();
+    if (empty($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+    ?>
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    
+    <!-- Honeypot Field (Hidden - for bot detection) -->
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+    
+    <div class="row g-3">
+        <!-- Rest of your form fields remain the same -->
+        <div class="col-md-6">
+            <label for="fullName" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" 
+                   maxlength="100" required>
+        </div>
 
                                 <!-- Company Name -->
                                 <div class="col-md-6">
@@ -356,4 +369,13 @@
         });
     </script>
 </body>
+<div id="preloader">
+    <div class="preloader-content">
+        <div class="spinner"></div>
+        <div class="loader-logo">
+            <img src="images/ft-lok.png" alt="Logo" class="pulse">
+        </div>
+        <p class="loading-text">Loading<span class="dots"></span></p>
+    </div>
+</div>
 </html>

@@ -60,26 +60,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Sync both carousels
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const carouselSmall = document.querySelector('#carouselSmall');
     const carouselLarge = document.querySelector('#carouselLarge');
     
-    // Sync both carousels when large carousel slides
+    // Initialize with auto-cycle
+    const bsCarouselSmall = new bootstrap.Carousel(carouselSmall, {
+        interval: 3000,
+        wrap: true
+    });
+    
+    const bsCarouselLarge = new bootstrap.Carousel(carouselLarge, {
+        interval: 3000,
+        wrap: true
+    });
+    
+    // Sync both ways
+    carouselSmall.addEventListener('slide.bs.carousel', function(e) {
+        bsCarouselLarge.to(e.to);
+    });
+    
     carouselLarge.addEventListener('slide.bs.carousel', function(e) {
-        const bsCarouselSmall = bootstrap.Carousel.getInstance(carouselSmall);
         bsCarouselSmall.to(e.to);
     });
     
-    // Sync indicators click
+    // Sync indicators
     const indicators = document.querySelectorAll('.carousel-indicators button');
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', function() {
-            const bsCarouselSmall = bootstrap.Carousel.getInstance(carouselSmall);
             bsCarouselSmall.to(index);
+            bsCarouselLarge.to(index);
         });
     });
 });
+
+
+
+
+
+
 
 // Hide preloader when page is fully loaded
 window.addEventListener('load', function() {

@@ -824,7 +824,7 @@ html, body {
     height: 420px;
     object-fit: contain;
     /* Change this background */
-    background: linear-gradient(110deg, #fafdfa 0%, #deedec 100%);
+    background: linear-gradient(110deg, #ebebeb 0%, #e3fff7 100%);
     /* OR use a solid color: background: #e8f5e9; */
     border-radius: 12px;
     padding: 25px;

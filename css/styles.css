@@ -1638,7 +1638,7 @@ html, body {
 .page-hero-wrap {
     position: relative;
     width: 100vw;
-    min-height: 50vh;
+    min-height: 65vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
